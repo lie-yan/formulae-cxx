@@ -1,0 +1,147 @@
+cmake_minimum_required(VERSION 3.6)
+project(formulae)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+
+set(SOURCE_FILES
+        include/font/ChangeStyle.h
+        include/font/CharFunctions.h
+        include/font/CharInfo.h
+        include/font/FontParams.h
+        include/font/FontTypes.h
+        include/font/FontVector.h
+        include/font/LoadFont.h
+        include/font/Size.h
+        include/font/StyleParams.h
+        include/general/BasicTypes.h
+        include/general/Const.h
+        include/general/Distance.h
+        include/general/General.h
+        include/general/Powers2.h
+        include/general/unit.h
+        include/interm/types/IL0_Item.h
+        include/interm/types/IL1_INoad.h
+        include/interm/types/IL1_IPen.h
+        include/interm/types/IL1_ISpace.h
+        include/interm/types/IL1_IStyle.h
+        include/interm/Boundaries.h
+        include/interm/ChangeKind.h
+        include/interm/IListDim.h
+        include/interm/IListTypes.h
+        include/interm/MathPenalty.h
+        include/math/types/MT0.h
+        include/math/types/MT1_Space.h
+        include/math/types/MT2_Noad.h
+        include/math/types/MT3_Accent.h
+        include/math/types/MT3_BigOp.h
+        include/math/types/MT3_Choice.h
+        include/math/types/MT3_GenFraction.h
+        include/math/types/MT3_Kind.h
+        include/math/types/MT3_LeftRight.h
+        include/math/types/MT3_MathChar.h
+        include/math/types/MT3_MList.h
+        include/math/types/MT3_MPen.h
+        include/math/types/MT3_MSpace.h
+        include/math/types/MT3_Overline.h
+        include/math/types/MT3_Radical.h
+        include/math/types/MT3_Script.h
+        include/math/types/MT3_Style.h
+        include/math/types/MT3_SubBox.h
+        include/math/types/MT3_Underline.h
+        include/math/types/MT3_VCenter.h
+        include/math/Accent.h
+        include/math/Kind.h
+        include/math/MathGlue.h
+        include/math/MathSpace.h
+        include/math/MathTypes.h
+        include/math/Radical.h
+        include/math/Spacing.h
+        include/node/types/ND0.h
+        include/node/types/ND1_Box.h
+        include/node/types/ND1_Node.h
+        include/node/types/ND2_Box.h
+        include/node/types/ND2_Char.h
+        include/node/types/ND2_Glue.h
+        include/node/types/ND2_Kern.h
+        include/node/types/ND2_Penalty.h
+        include/node/types/ND2_Rule.h
+        include/node/AxisCenter.h
+        include/node/BasicBox.h
+        include/node/BasicChar.h
+        include/node/BoxPack.h
+        include/node/BoxTypes.h
+        include/node/Delimiter.h
+        include/node/GenFraction.h
+        include/node/GlueCalculation.h
+        include/node/HListGlue.h
+        include/node/MakeAtop.h
+        include/node/MakeChar.h
+        include/node/MakeFract.h
+        include/node/MakeLimOp.h
+        include/node/MakeLine.h
+        include/node/MakeScripts.h
+        include/node/MakeVBox.h
+        include/node/NodeDim.h
+        include/node/NodeListDim.h
+        include/trans/IListTranslate.h
+        include/trans/MathTranslate.h
+        include/dvi/Out.h
+        include/dvi/OutHigh.h
+        include/formulae.h
+    src/font/ChangeStyle.cpp
+    src/font/CharFunctions.cpp
+    src/font/CharInfo.cpp
+    src/font/FontParams.cpp
+    src/font/FontVector.cpp
+    src/font/LoadFont.cpp
+    src/font/StyleParams.cpp
+    src/general/Distance.cpp
+    src/interm/Boundaries.cpp
+    src/interm/ChangeKind.cpp
+    src/interm/IListDim.cpp
+    src/interm/MathPenalty.cpp
+    src/math/MathSpace.cpp
+    src/math/Spacing.cpp
+    src/node/BasicBox.cpp
+    src/node/BasicChar.cpp
+    src/node/BoxPack.cpp
+    src/node/Delimiter.cpp
+    src/node/GlueCalculation.cpp
+    src/node/MakeAtop.cpp
+    src/node/MakeChar.cpp
+    src/node/MakeFract.cpp
+    src/node/MakeLimOp.cpp
+    src/node/MakeScripts.cpp
+    src/node/NodeDim.cpp
+    src/node/NodeListDim.cpp
+    src/trans/IListTranslate.cpp
+    src/trans/MathTranslate.cpp
+    src/dvi/Out.cpp
+    src/dvi/OutHigh.cpp
+    include/dvi/OutDvi.h
+    src/dvi/OutDvi.cpp
+    include/dvi/DviState.h
+    src/dvi/DviState.cpp
+    include/dvi/DviCmd.h
+    src/dvi/DviCmd.cpp
+    include/dvi/SetNode.h
+    src/dvi/SetNode.cpp
+    include/dvi/SetBox.h
+    src/dvi/SetBox.cpp
+    include/dvi/ShipOut.h
+    src/dvi/ShipOut.cpp
+    include/input/Input.h
+    src/input/Input.cpp
+        main.cpp
+  )
+
+include_directories(include)
+include_directories(include/font)
+include_directories(include/general)
+include_directories(include/interm)
+include_directories(include/math)
+include_directories(include/node)
+include_directories(include/trans)
+include_directories(include/dvi)
+include_directories(include/input)
+add_executable(formulae ${SOURCE_FILES})
