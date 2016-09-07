@@ -19,4 +19,4 @@ $ cd ../fonts
 $ ../build/formulae
 ```
 
-Find `this.dvi` in the `fonts` directory. 
+Find `this.dvi` in the `fonts` directory. To view `.dvi` files, we may use dvi-viewers like `xdvi`, or convert them to `.pdf` files via `dvipdf`.
