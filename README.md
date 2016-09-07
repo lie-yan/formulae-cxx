@@ -12,6 +12,7 @@ Make sure that the working directory is `fonts` when running the executable.
 ```bash
 $ cd formulae-cxx
 $ mkdir build
+$ cd build
 $ cmake ..
 $ make
 $ cd ../fonts
